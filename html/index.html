@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<!--
+  qb-scoreboard — NUI
+  Developed by: Nerd Developer
+  Website: https://nerd-developer.com
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scoreboard</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+    <div id="scoreboard" class="scoreboard hidden">
+        <div class="panel" id="panel">
+            <div class="panel-glow" aria-hidden="true"></div>
+            <div class="panel-noise" aria-hidden="true"></div>
+            <div class="panel-inner">
+
+            <!-- ====== HEADER ====== -->
+            <div class="header">
+                <div class="header-accent" aria-hidden="true"></div>
+                <div class="header-left">
+                    <div class="live-dot"></div>
+                    <span class="server-name" id="serverName">Server</span>
+                </div>
+                <div class="header-right">
+                    <div class="header-time" id="headerTime">00:00</div>
+                </div>
+            </div>
+
+            <!-- ====== STATS BAR ====== -->
+            <div class="stats-bar">
+                <!-- Players -->
+                <div class="stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-icon players-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value" id="playerCount">0/64</span>
+                            <span class="stat-label" id="labelPlayers">Players</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <!-- Police -->
+                <div class="stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-icon police-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7v6c0 5.5 4.3 10.7 10 12 5.7-1.3 10-6.5 10-12V7L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value police-val" id="policeCount">0</span>
+                            <span class="stat-label" id="labelPolice">Police</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat-divider"></div>
+
+                <!-- EMS -->
+                <div class="stat-card">
+                    <div class="stat-card-inner">
+                        <div class="stat-icon ems-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                            </svg>
+                        </div>
+                        <div class="stat-info">
+                            <span class="stat-value ems-val" id="emsCount">0</span>
+                            <span class="stat-label" id="labelEms">EMS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ====== SECTION TITLE ====== -->
+            <div class="section-title">
+                <span class="section-line"></span>
+                <span class="section-text" id="labelActiveEvents">ACTIVE EVENTS</span>
+                <span class="section-line"></span>
+            </div>
+
+            <!-- ====== EVENTS LIST ====== -->
+            <div class="events-list" id="eventsList">
+                <!-- injected by JS -->
+            </div>
+
+            <!-- ====== FOOTER ====== -->
+            <div class="footer">
+                <div class="footer-bar" aria-hidden="true"><span class="footer-bar-fill" id="footerBarFill"></span></div>
+                <div class="footer-row">
+                    <span id="footerLeft"></span>
+                    <span class="footer-dot">•</span>
+                    <span id="footerPlayers">0 online</span>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
